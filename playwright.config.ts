@@ -10,5 +10,7 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   retries: 1,
-  reporter: 'html',
+  reporter: [
+    ['html', { outputFolder: 'playwright-report', open: 'never' }]
+  ],
 });
